@@ -14,6 +14,10 @@
   </head>
   <body>
     <!-- TOP NAVBAR -->
+    <div class="overflow-auto w-25" style=" max-height: 40vh; margin-top: 70px; margin-left: 850px; -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;" id="medsList"></div>
+
     <nav class="navbar navbar-expand-lg navbar-dark menu shadow fixed-top">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
@@ -31,34 +35,38 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-          <!-- <ul class="navbar-nav">
-              <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Home</a></li>
+          
+          <form class="d-flex" id="search-form" autocomplete="off">
+            <input class="form-control me-2 rounded-pill border border-1" id="med-box" type="search" placeholder="Search Medicines" aria-label="Search"/>
+            
+            <button id="srh-btn" class="btn btn-outline-primary border border-2 border-primary rounded-pill" style="transform: translateX(-52px);" type="submit" id="search-btn">
+              <b><i class="fas fa-search-plus text-primary"></i></b>
+            </button>
+            <ul class="navbar-nav" style="padding-bottom: auto;">
+              <!-- <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Home</a></li>
               <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
               <li class="nav-item"><a class="nav-link" href="#">Testimonials</a></li>
-              <li class="nav-item"><a class="nav-link" href="#">faq</a></li>
-              <li class="nav-item"><a class="nav-link" href="#">portfolio</a></li>
-            </ul> -->
-          <form class="d-flex" id="search-form">
-            <input class="form-control me-2 rounded-pill" id="med-box" type="search" placeholder="Search Medicines" aria-label="Search"/>
-            <div id="medsList"></div>
-            <button class="btn btn-outline-success" type="submit" id="search-btn">
-              Search
-            </button>
-            <div></div>
+              <li class="nav-item"><a class="nav-link" href="#">faq</a></li> -->
+              <li class="nav-item"><a class="nav-link" href="#">Login/Signup</a></li>
+            </ul> 
           </form>
-          <button type="button" class="rounded-pill btn-rounded me-2">
+          <!-- <button type="button" class="rounded-pill btn-rounded me-2">
             Login/Signup
             <span>
               <i class="fas fa-user"></i>
             </span>
-          </button>
+          </button> -->
         </div>
       </div>
     </nav>
 
+
+
+    
     <script src="assets/bootstrap-5.1.1/js/bootstrap.bundle.js"></script>
-    <script src="node_modules/jquery/src/jquery.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
      <script type="text/javascript"> 
+    //  Searches for the similarities in the DB and forms suggestion list
      $(document).ready(function(){ 
        $("#med-box").keyup(function(){
         var meds = $(this).val(); 
@@ -68,13 +76,51 @@
             method: "POST", 
             data: { meds: meds}, 
             success: function(data){ 
+              console.log(data);
               $("#medsList").fadeIn("fast").html(data); 
             } }); 
           }else{
             $("#medsList").fadeOut();
           }
-        }); 
-       }); 
-      </script> 
+         }); 
+        });
+
+        // Copies the text from the user selected list option and fills it inside the searchbox
+        $(document).on('click' , '#medsList li' , function(){
+          $('#med-box').val($(this).text());
+          $(this).toggleClass("active");
+          $("#medsList").fadeOut();
+        });
+
+        // Hides the suggestions div when textbox focus is lost
+       $(function() {
+          $('#med-box').focusout(function() {
+            $('#medsList').fadeOut();
+            });
+          });
+        
+
+        //This function expands the textbox size when clicked
+        $(function() {  
+          $('#med-box').focusin(function() {
+            $( "#med-box" ).animate({
+              width: "50vh",
+              right: "+=50"
+             }, 500);
+            }); 
+          });
+
+          // This function changes color of button to primary and text to white
+          $("#srh-btn").hover(
+            function () {
+              $(this).find('i').addClass("text-white");
+              $(this).find('i').removeClass("text-primary");
+            },
+            function () {
+              $(this).find('i').addClass("text-primary");
+              $(this).find('i').removeClass("text-white");
+            }
+          );
+      </script>
   </body>
 </html>
