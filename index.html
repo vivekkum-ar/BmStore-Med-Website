@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bihar Medical</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/fontawesome.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- TOP NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark menu shadow fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="assets/images/logo.png" alt="logo image" width="250" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <!-- <ul class="navbar-nav">
+              <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Testimonials</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">faq</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">portfolio</a></li>
+            </ul> -->
+          <form class="d-flex" id="search-form">
+            <input class="form-control me-2 rounded-pill" id="med-box" type="search" placeholder="Search Medicines" aria-label="Search"/>
+            <div id="medsList"></div>
+            <button class="btn btn-outline-success" type="submit" id="search-btn">
+              Search
+            </button>
+            <div></div>
+          </form>
+          <button type="button" class="rounded-pill btn-rounded me-2">
+            Login/Signup
+            <span>
+              <i class="fas fa-user"></i>
+            </span>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <script src="assets/bootstrap-5.1.1/js/bootstrap.bundle.js"></script>
+    <script src="node_modules/jquery/src/jquery.js"></script>
+     <script type="text/javascript"> 
+     $(document).ready(function(){ 
+       $("#med-box").keyup(function(){
+        var meds = $(this).val(); 
+        if(meds != ""){ 
+          $.ajax({ 
+            url: "load-meds.php", 
+            method: "POST", 
+            data: { meds: meds}, 
+            success: function(data){ 
+              $("#medsList").fadeIn("fast").html(data); 
+            } }); 
+          }else{
+            $("#medsList").fadeOut();
+          }
+        }); 
+       }); 
+      </script> 
+  </body>
+</html>

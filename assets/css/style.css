@@ -11118,5 +11118,100 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+.btn-rounded {
+  position: relative;
+  padding: 0.9375rem 4.375rem 0.9375rem 1.25rem;
+  font-weight: 700;
+  margin: 0;
+  border: 0.1rem solid rgba(255, 255, 255, 0.6);
+  background-color: #fff;
+}
+@media (max-width: 575.98px) {
+  .btn-rounded {
+    display: none;
+  }
+}
+.btn-rounded span {
+  position: absolute;
+  background-color: #ff00cc;
+  width: 2.5em;
+  height: 2.5rem;
+  top: 50%;
+  right: 5px;
+  transform: translateY(-50%);
+  border-radius: 50%;
+}
+.btn-rounded span i {
+  color: #fff;
+  font-size: 1rem;
+  line-height: 2.5rem;
+}
+.btn-rounded span:hover {
+  background-color: #fff;
+}
+.btn-rounded:hover {
+  background: linear-gradient(to right, rgba(255, 0, 204, 0.95), rgba(51, 51, 153, 0.95));
+  color: #fff;
+}
+.btn-rounded:hover span {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.menu {
+  background: linear-gradient(to right, rgba(255, 0, 204, 0.95), rgba(51, 51, 153, 0.95));
+}
+.menu li {
+  padding: 0 0.7rem;
+}
+.menu li a {
+  text-transform: capitalize;
+  font-weight: 600;
+}
+
+.navbar .navbar-nav .nav-link {
+  position: relative;
+}
+
+.navbar .navbar-nav .nav-link::after {
+  position: absolute;
+  bottom: 0;
+  top: 4.3rem;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-color: #fff;
+  color: transparent;
+  width: 0%;
+  content: "";
+  height: 3px;
+  transition: all 0.5s;
+}
+
+.navbar .navbar-nav .nav-link:hover::after {
+  width: 100%;
+}
+
+.navbar .navbar-brand {
+  position: relative;
+}
+
+.navbar .navbar-brand::after {
+  position: absolute;
+  bottom: 0;
+  top: 4.35rem;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-color: #fff;
+  color: transparent;
+  width: 0%;
+  content: "";
+  height: 3px;
+  transition: all 0.5s;
+}
+
+.navbar .navbar-brand:hover::after {
+  width: 100%;
+}
 
 /*# sourceMappingURL=style.css.map */
