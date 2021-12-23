@@ -17,5 +17,5 @@ else
     $output .= "<li class="."list-group-item".">No results</li>";
 }
 $output .= "</ul>";
-echo $output;
+echo $output; //returns output as a list of distinct results
 ?>
