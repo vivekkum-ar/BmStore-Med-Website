@@ -1,0 +1,111 @@
+@use '../custom' as *;
+
+.display-2{
+    margin-bottom:1rem;
+    text-transform:capitalize;
+    font-family: 'Poppins', sans-serif;
+
+    &--intro{
+        // display:inline-block;
+        // font-weight:700;
+        // font-family: 'Poppins', sans-serif;
+        color: #fff;
+        font-family: 'poppins', sans-serif;
+        font-size: 90px;
+        font-weight: 700;
+        // font-style: italic;
+        text-align: center;
+        padding: 0 0px;
+        margin: 0 auto;
+        position: relative;
+
+        &:hover{
+            animation: shadow-animate 0.3s alternate linear 1 forwards;    
+        }
+    }
+
+    @include media-breakpoint-only(xl){
+        &--intro{ font-size: 90px; }
+    }
+    @include media-breakpoint-only(lg){
+        &--intro{ font-size: 70px; }
+    }
+    @include media-breakpoint-only(md){
+        &--intro{ font-size: 50px; }
+    }   
+    @include media-breakpoint-only(sm){
+        &--intro{
+            font-size: 35px;
+            line-height: 35px;
+        }
+    }
+    @include media-breakpoint-only(xs){
+        &--intro{
+            font-size: 35px;
+            line-height: 35px;
+        }
+    }
+
+
+    &--description{
+        font-size:1rem;      // For small devices
+        display:block;
+        margin-top: 1.2rem;
+        text-transform: none;
+
+        @include media-breakpoint-up(lg){    // For large devices increase font size. Used media-breakpoint-up(lg), & lg- large
+            font-size: 1.5rem;
+            display: inline-block;
+        }
+    }
+}
+
+// HEADING LINE
+.heading-line::before{
+    content: "";
+    width: 10rem;
+    height: 0.1rem;
+    display: block;
+    background-color: $primary;
+    margin: 0 auto;
+}
+.heading-line::after{
+    content: "";
+    width: 2rem;
+    height: 0.2rem;
+    padding-top: 0.5rem;
+    display: block;
+    background-color: $primary;
+    margin: 0 auto 1rem auto;
+}
+
+// DISPLAY 3
+.display-3{
+    font-family: 'Poppins', sans-serif;
+
+    &--title{
+        font-size: 1.2rem;
+        text-transform: capitalize;
+        font-weight: 600;
+        font-family: 'Poppins', sans-serif;
+        display: inline-block;
+        background-image: linear-gradient(to right,$primary,$secondary);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        @include media-breakpoint-up(lg){
+            font-size: 1.8rem;
+        }
+    }
+}
+
+// BORDER RIGHT
+.border-right{
+    border-right: 0.1rem solid $gray-300;
+}
+
+// GRADIENT BG
+.gradient{
+    background: linear-gradient(to right,rgba($primary,0.95),rgba($secondary,0.95));
+}
