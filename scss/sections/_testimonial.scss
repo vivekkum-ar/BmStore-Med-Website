@@ -16,9 +16,9 @@
 }
 .post-slide .post-img img{
     width: 100%;
-    height: auto;
     transform: scale(1);
     transition: all 1s ease-in-out 0s;
+    height: 220px;
 }
 .post-slide:hover .post-img img{
     transform: scale(1.08);
@@ -26,6 +26,7 @@
 .post-slide .post-content{
     background: #fff;
     padding: 20px;
+    height: 40vh;
 }
 .post-slide .post-title{
     font-size: 17px;
@@ -45,7 +46,7 @@
 .post-slide .post-description{
     font-size: 15px;
     color: #676767;
-    line-height: 24px;
+    line-height: 15px;
     margin-bottom: 14px;
 }
 .post-slide .post-bar{
@@ -83,7 +84,7 @@
     font-weight: bold;
     color: #fff;
     background: #e7989a;
-    border-bottom-right-radius: 10px;
+    text-decoration: none;
     text-transform: capitalize;
     transition: all 0.30s linear;
 }
