@@ -61,23 +61,19 @@
 }
 
 // HEADING LINE
-.heading-line::before{
+.heading-lines{
     content: "";
-    width: 10rem;
-    height: 0.1rem;
-    display: block;
-    background-color: $primary;
     margin: 0 auto;
 }
-.heading-line::after{
-    content: "";
-    width: 2rem;
-    height: 0.2rem;
-    padding-top: 0.5rem;
-    display: block;
-    background-color: $primary;
-    margin: 0 auto 1rem auto;
-}
+// .heading-line::after{
+//     content: "";
+//     width: 2rem;
+//     height: 0.2rem;
+//     padding-top: 0.5rem;
+//     display: block;
+//     background-color: $primary;
+//     margin: 0 auto 2rem auto;
+// }
 
 // DISPLAY 3
 .display-3{

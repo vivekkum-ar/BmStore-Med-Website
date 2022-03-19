@@ -1,107 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bihar Medical</title>
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="stylesheet" href="assets/css/fontawesome.css" />
-    <link rel="stylesheet" href="assets/vendors/css/glightbox.min.css"/>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:400,500,600,700" rel="stylesheet">
-  </head>
-  <body>
-    <!-- TOP NAVBAR -->
-    
 
-    <nav class="navbar navbar-expand-lg navbar-dark menu shadow fixed-top">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-          <img src="assets/images/logo.png" alt="logo image" width="250" />
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-end dropdown" id="navbarNav">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bihar Medical</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/fontawesome.css" />
+  <link rel="stylesheet" href="assets/vendors/css/glightbox.min.css" />
+  <link rel="stylesheet" href="assets/vendors/css/glightbox.min.css" />
+  <link rel="stylesheet" href="assets/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css" />
+  <link rel="stylesheet" href="assets/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css" />
+  <!-- <link rel="stylesheet" href="./assets/Baraja-master/css/baraja.css" />
+    <link rel="stylesheet" href="./assets/Baraja-master/css/demo.css">
+    <link rel="stylesheet" href="./assets/Baraja-master/css/custom.css"> -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:400,500,600,700" rel="stylesheet" />
+</head>
 
-          <form class="d-flex" id="search-form" autocomplete="off">
-            <input class="form-control me-2 rounded-pill border border-1" id="med-box" type="search" placeholder="Search Medicines" aria-label="Search"/>
-            
-            <button id="srh-btn" class="btn btn-outline-primary border border-2 border-primary rounded-pill" style="transform: translateX(-52px);" type="submit" id="search-btn">
-              <b><i class="fas fa-search-plus text-primary"></i></b>
-            </button>
-            <ul class="navbar-nav" style="padding-bottom: auto;">
-              <!-- <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Home</a></li>
+<body>
+  <!-- TOP NAVBAR -->
+
+  <nav class="navbar navbar-expand-lg navbar-dark menu shadow fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="assets/images/logo.png" alt="logo image" width="250" />
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end dropdown" id="navbarNav">
+        <form class="d-flex" id="search-form" autocomplete="off">
+          <input class="form-control me-2 rounded-pill border border-1" id="med-box" type="search"
+            placeholder="Search Medicines" aria-label="Search" />
+          <button id="srh-btn" class="btn btn-outline-primary border border-2 border-primary rounded-pill"
+            style="transform: translateX(-52px)" type="submit" id="search-btn">
+            <b><i class="fas fa-search-plus text-primary"></i></b>
+          </button>
+          <ul class="navbar-nav" style="padding-bottom: auto">
+            <!-- <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Home</a></li>
               <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
               <li class="nav-item"><a class="nav-link" href="#">Testimonials</a></li>
               <li class="nav-item"><a class="nav-link" href="#">faq</a></li> -->
-              <li class="nav-item"><a class="nav-link" href="#">Login/Signup</a></li>
-            </ul> 
-            <div class="overflow-auto dropdown-content" style=" max-height: 40vh; margin-top: 40px;  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;" id="medsList"></div>
-          </form>
-          
-          <!-- <button type="button" class="rounded-pill btn-rounded me-2">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Login/Signup</a>
+            </li>
+          </ul>
+          <div class="overflow-auto dropdown-content"
+            style="max-height: 40vh;margin-top: 40px;-webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3),  0 0 40px rgba(0, 0, 0, 0.1) inset;-moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3),  0 0 40px rgba(0, 0, 0, 0.1) inset;box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3),  0 0 40px rgba(0, 0, 0, 0.1) inset;"
+            id="medsList"></div>
+        </form>
+
+        <!-- <button type="button" class="rounded-pill btn-rounded me-2">
             Login/Signup
             <span>
               <i class="fas fa-user"></i>
             </span>
           </button> -->
-        </div>
       </div>
-    </nav>
+    </div>
+  </nav>
 
-      <!-- INTRO SECTION -->
-      <section id="home" class="intro-section">
-        <div class="container">
-          <div class="row align-items-center text-white">
-            <!-- START THE CONTENT FOR THE INTRO  -->
-            <div class="col-md-6 intros text-start">
-              <h1 class="display-2">
-                <span class="display-2--intro">Hey!, I'm Vivek
-                </span>
-                <span class="display-2--description lh-base">
-                  This is a portfolio website. This is the part of short description. You can add your description here.
-                </span>
-              </h1>
-              <button type="button" class="rounded-pill btn-rounded">Get in Touch
-                <span><i class="fas fa-arrow-right"></i></span>
-              </button>
-            </div>
-            <!-- START THE CONTENT FOR THE VIDEO -->
-            <div class="col-md-6 intros text-end">
-              <div class="video-box">
-                <img src="assets/images/arts/Health _Monochromatic.png" alt="video illutration" class="img-fluid">
-                <a href="#" class="glightbox position-absolute top-50 start-50 translate-middle">
-                  <span>
-                    <i class="fas fa-play-circle"></i>
-                  </span>
-                  <span class="border-animation border-animation--border-1"></span>
-                  <span class="border-animation border-animation--border-2"></span>
-                </a>
-              </div>
-            </div>
+  <!-- INTRO SECTION -->
+  <section id="home" class="intro-section">
+    <div class="container">
+      <div class="row align-items-center text-white">
+        <!-- START THE CONTENT FOR THE INTRO  -->
+        <div class="col-md-6 intros text-start">
+          <h1 class="display-2">
+            <span class="display-2--intro">Medicine & Wellness </span>
+            <span class="display-2--description lh-1">
+              <p class="fst-italic mx-0 my-1 py-0">
+                “Time and health are two precious assets that we don’t
+                recognize and appreciate until they have been depleted.”
+              </p>
+              <br />
+              <p class="text-end fw-bold fst-italic mx-0 my-1 py-0 lh-1" style="transform: translate(0px, -80%)">
+                — Denis Waitley
+              </p>
+            </span>
+          </h1>
+          <button type="button" class="rounded-pill btn-rounded">
+            Get in Touch
+            <span><i class="fas fa-arrow-right"></i></span>
+          </button>
+        </div>
+        <!-- START THE CONTENT FOR THE VIDEO -->
+        <div class="col-md-6 intros text-end">
+          <div class="video-box">
+            <img src="assets/images/arts/Health _Monochromatic.png" alt="video illutration" class="img-fluid" />
+            <a href="#" class="glightbox position-absolute top-50 start-50 translate-middle">
+              <span>
+                <i class="fas fa-play-circle"></i>
+              </span>
+              <span class="border-animation border-animation--border-1"></span>
+              <span class="border-animation border-animation--border-2"></span>
+            </a>
           </div>
         </div>
-        
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fill-opacity="1" d="M0,160L48,176C96,192,192,224,288,208C384,192,480,128,576,133.3C672,139,768,213,864,202.7C960,192,1056,96,1152,74.7C1248,53,1344,107,1392,133.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
-      </section>
+      </div>
+    </div>
 
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <path fill="#ffffff" fill-opacity="1"
+        d="M0,160L48,176C96,192,192,224,288,208C384,192,480,128,576,133.3C672,139,768,213,864,202.7C960,192,1056,96,1152,74.7C1248,53,1344,107,1392,133.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+      </path>
+    </svg>
+  </section>
 
+  <div class="ms-5 me-5 icon d-block fas fa-pills mt-5" style="font-size: 2.5rem; color: #ff00cc">
+    <br />
+    <h3 class="display-3--title mt-1">Shop by Category</h3>
+    <div class="heading-lines" style=" width: 100%; height: 0.3rem; background-color: #ff00cc; margin: 0 auto;"></div>
+  </div>
 
-      <section>
-      <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-3 col-sm-6">
+  <section class="sec">
+    <div class="container-fluid">
+      <div class="row" id="shopByCategory-grid">
+        <!-- <div class="col-md-3 col-sm-6">
                 <div class="product-grid">
                     <div class="product-image">
                         <a href="#" class="image">
                             <img class="pic-1" src="assets/images/arts/img-2.jpg">
                         </a>
                         <a class="add-to-cart" href="">ADD TO CART</a>
+                        <span class="product-offer-label">-20%</span>
                         <span class="product-sale-label">sale!</span>
                     </div>
                     <div class="product-content">
@@ -123,201 +149,592 @@
                        </ul>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-3 col-sm-6">
-              <div class="product-grid">
-                  <div class="product-image">
-                      <a href="#" class="image">
-                          <img class="pic-1" src="assets/images/arts/img-2.jpg">
-                      </a>
-                      <a class="add-to-cart" href="">ADD TO CART</a>
-                  </div>
-                  <div class="product-content">
-                      <span class="product-stock">in stock</span>
-                      <ul class="icon">
-                          <li><a href="#"><i class="far fa-heart"></i></a></li>
-                          <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
-                          <li><a href="#"><i class="far fa-eye"></i></a></li>
-                      </ul>
-                      <h3 class="title"><a href="#">Women's Top</a></h3>
-                      <span class="category"><a href="#">Clothing</a></span>
-                      <div class="price">$18.10</div>
-                      <ul class="rating">
-                         <li class="fas fa-star"></li>
-                         <li class="fas fa-star"></li>
-                         <li class="fas fa-star"></li>
-                         <li class="fas fa-star"></li>
-                         <li class="fas fa-star disable"></li>
-                     </ul>
-                  </div>
-              </div>
-          </div>
-            <div class="col-md-3 col-sm-6">
-                <div class="product-grid">
-                    <div class="product-image">
-                        <a href="#" class="image">
-                            <img class="pic-1" src="assets/images/arts/img-2.jpg">
-                        </a>
-                        <a class="add-to-cart" href="">ADD TO CART</a>
-                    </div>
-                    <div class="product-content">
-                        <span class="product-stock">in stock</span>
-                        <ul class="icon">
-                            <li><a href="#"><i class="far fa-heart"></i></a></li>
-                            <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
-                            <li><a href="#"><i class="far fa-eye"></i></a></li>
-                        </ul>
-                        <h3 class="title"><a href="#">Men's Shirt</a></h3>
-                        <span class="category"><a href="#">Clothing</a></span>
-                        <div class="price">$21.60</div>
-                        <ul class="rating">
-                           <li class="fas fa-star"></li>
-                           <li class="fas fa-star"></li>
-                           <li class="fas fa-star"></li>
-                           <li class="fas fa-star"></li>
-                           <li class="fas fa-star"></li>
-                       </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6">
-              <div class="product-grid">
-                  <div class="product-image">
-                      <a href="#" class="image">
-                          <img class="pic-1" src="assets/images/arts/img-2.jpg">
-                      </a>
-                      <a class="add-to-cart" href="">ADD TO CART</a>
-                  </div>
-                  <div class="product-content">
-                      <span class="product-stock">in stock</span>
-                      <ul class="icon">
-                          <li><a href="#"><i class="far fa-heart"></i></a></li>
-                          <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
-                          <li><a href="#"><i class="far fa-eye"></i></a></li>
-                      </ul>
-                      <h3 class="title"><a href="#">Men's Shirt</a></h3>
-                      <span class="category"><a href="#">Clothing</a></span>
-                      <div class="price">$21.60</div>
-                      <ul class="rating">
-                         <li class="fas fa-star"></li>
-                         <li class="fas fa-star"></li>
-                         <li class="fas fa-star"></li>
-                         <li class="fas fa-star"></li>
-                         <li class="fas fa-star"></li>
-                     </ul>
-                  </div>
-              </div>
-          </div>
-          <div class="col-md-3 col-sm-6">
-            <div class="product-grid">
-                <div class="product-image">
-                    <a href="#" class="image">
-                        <img class="pic-1" src="assets/images/arts/img-2.jpg">
-                    </a>
-                    <a class="add-to-cart" href="">ADD TO CART</a>
-                </div>
-                <div class="product-content">
-                    <span class="product-stock">in stock</span>
-                    <ul class="icon">
-                        <li><a href="#"><i class="far fa-heart"></i></a></li>
-                        <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
-                        <li><a href="#"><i class="far fa-eye"></i></a></li>
-                    </ul>
-                    <h3 class="title"><a href="#">Men's Shirt</a></h3>
-                    <span class="category"><a href="#">Clothing</a></span>
-                    <div class="price">$21.60</div>
-                    <ul class="rating">
-                       <li class="fas fa-star"></li>
-                       <li class="fas fa-star"></li>
-                       <li class="fas fa-star"></li>
-                       <li class="fas fa-star"></li>
-                       <li class="fas fa-star"></li>
-                   </ul>
-                </div>
-            </div>
-        </div>
-        </div>
+            </div> -->
+      </div>
     </div>
   </section>
-      <script src='assets/vendors/js/glightbox.min.js'></script>
 
-      <script type="text/javascript">
-      const lightbox = GLightbox({
-        'href': 'https://youtu.be/iJKCj8uAHz8',
-        'type': 'video',
-        'source': 'youtube', //vimeo, youtube or local
-        'width': 900,
+  <div class="ms-5 me-5 icon d-block fas fa-tablets mt-5" style="font-size: 2.5rem; color: #ff00cc">
+    <br />
+    <h3 class="display-3--title mt-1">Shop by offers</h3>
+    <div class="heading-lines" style=" width: 100%; height: 0.3rem; background-color: #ff00cc; margin: 0 auto;"></div>
+  </div>
+
+  <section class="sec">
+    <div class="container-fluid">
+      <div class="row" id="shopByOffer-grid"></div>
+    </div>
+  </section>
+  <!-- Reviews section -->
+  <section>
+    <div class="ms-5 me-5 icon d-block fas fa-users mt-5" style="font-size: 2.5rem; color: #ff00cc">
+      <br />
+      <h3 class="display-3--title mt-1">What our customers say</h3>
+      <div class="heading-lines" style=" width: 100%; height: 0.3rem; background-color: #ff00cc; margin: 0 auto;"></div>
+    </div>
+    <div class="container-fluid">
+      <div class="row justify-content-center align-items-center">
+        <div id="nav-prev" class="col-1 col-sm-1 d-flex justify-content-start">
+          <i class="fas fa-arrow-alt-circle-left text-dark fs-1"></i>
+        </div>
+    <div class="baraja-review-div col-10 col-sm-10">
+      <ul id="baraja-el" class="baraja-container">
+        <li>
+          <img src="./assets/Baraja-master/images/1.jpg" alt="image1" />
+          <h4>Coco Loko</h4>
+          <p>
+            Total bicycle rights in blog four loko raw denim ex, helvetica
+            sapiente odio placeat.
+          </p>
+        </li>
+        <li>
+          <img src="./assets/Baraja-master/images/2.jpg" alt="">
+          <h4>Lorem, ipsum.</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut dolor quisquam nisi nihil fugit.</p>
+        </li>
+        <li>
+          <img src="./assets/Baraja-master/images/3.jpg" alt="">
+          <h4>Id, magni?</h4>
+          <p>Laudantium saepe, cumque suscipit praesentium, repellat nemo maiores excepturi recusandae animi libero iste
+            amet.</p>
+        </li>
+        <li>
+          <img src="./assets/Baraja-master/images/4.jpg" alt="">
+          <h4>Quae, illo.</h4>
+          <p>Dolores excepturi, nihil illum earum accusamus, eos expedita accusantium veniam asperiores ipsa esse
+            praesentium!</p>
+        </li>
+        <li>
+          <img src="./assets/Baraja-master/images/5.jpg" alt="">
+          <h4>Ab, amet.</h4>
+          <p>Sequi harum reprehenderit numquam necessitatibus, et consequuntur error odit perferendis quod accusantium
+            repellat veritatis.</p>
+        </li>
+        <li>
+          <img src="./assets/Baraja-master/images/6.jpg" alt="">
+          <h4>Dolore, natus.</h4>
+          <p>Molestias, voluptatibus facere nostrum dolorum necessitatibus, rerum odit tempora magnam, fuga placeat
+            animi assumenda.</p>
+        </li>
+        <li>
+          <img src="./assets/Baraja-master/images/7.jpg" alt="">
+          <h4>Earum, illum!</h4>
+          <p>Deleniti culpa, id corrupti harum, et, earum blanditiis omnis esse ab vitae ipsam perferendis.</p>
+        </li>
+        <li>
+          <img src="./assets/Baraja-master/images/8.jpg" alt="">
+          <h4>Possimus, ipsum.</h4>
+          <p>Ipsam, qui esse? Laborum explicabo dolores sapiente dolorem ea, neque illum soluta eum incidunt.</p>
+        </li>
+        <li>
+          <img src="./assets/Baraja-master/images/9.jpg" alt="">
+          <h4>Possimus, in.</h4>
+          <p>Cumque reprehenderit est molestias ipsum corporis provident doloremque non saepe, minus consequatur,
+            laudantium fuga?</p>
+        </li>
+        <li>
+          <img src="./assets/Baraja-master/images/10.jpg" alt="">
+          <h4>Labore, iure.</h4>
+          <p>Quaerat eius corrupti maxime asperiores distinctio libero nisi id? Possimus fugit maxime rem sit.</p>
+        </li>
+        <li>
+          <img src="./assets/Baraja-master/images/11.jpg" alt="">
+          <h4>Esse, inventore.</h4>
+          <p>Labore excepturi asperiores veniam quo ratione cum cumque pariatur harum nulla magni, tempore odit.</p>
+        </li>
+        <li>
+          <img src="./assets/Baraja-master/images/12.jpg" alt="">
+          <h4>Magnam, delectus?</h4>
+          <p>Labore odio ullam quibusdam ipsum quia illum quod consequatur perspiciatis, architecto laborum sit non!</p>
+        </li>
+      </ul>
+    </div>
+    <div id="nav-next" class="col-1 col-sm-1 d-flex justify-content-end">
+      <i class="fas fa-arrow-alt-circle-right text-dark fs-1"></i>
+    </div>
+    </div>
+      </div>
+  </section>
+
+  <section id="testimonials" class="testimonials">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#fff" fill-opacity="1" d="M0,96L48,128C96,160,192,224,288,213.3C384,203,480,117,576,117.3C672,117,768,203,864,202.7C960,203,1056,117,1152,117.3C1248,117,1344,203,1392,245.3L1440,288L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
+    <div class="container">
+      <div class="row text-center text-white">
+        <h1 class="display-3 fw-bold">
+          Articles & Blogs
+        </h1>
+        <hr style="width: 100px; height: 3px;" class="mx-auto">
+        <div class="row">
+          <div class="col-md-12">
+              <div id="news-slider" class="owl-carousel owl-theme">
+
+                  <div class="post-slide">
+                    <div class="post-img">
+                        <a href="#"><img src="assets/images/img-2.jpg" alt=""></a>
+                    </div>
+                    <div class="post-content">
+                        <h3 class="post-title"><a href="#">Latest News Post</a></h3>
+                        <p class="post-description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec elementum mauris. Praesent vehicula gravida dolor, ac efficitur sem sagittis.
+                        </p>
+                        <ul class="post-bar">
+                            <li><i class="fa fa-calendar"></i> June 7, 2016</li>
+                            <li>
+                                <i class="fa fa-folder"></i>
+                                <a href="#">Mockup</a>
+                                <a href="#">Graphics</a>
+                                <a href="#">Flayers</a>
+                            </li>
+                        </ul>
+                        <a href="#" class="read-more">read more</a>
+                    </div>
+                </div>
+
+                  <div class="post-slide">
+                    <div class="post-img">
+                        <a href="#"><img src="assets/images/img-2.jpg" alt=""></a>
+                    </div>
+                    <div class="post-content">
+                        <h3 class="post-title"><a href="#">Latest News Post</a></h3>
+                        <p class="post-description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec elementum mauris. Praesent vehicula gravida dolor, ac efficitur sem sagittis.
+                        </p>
+                        <ul class="post-bar">
+                            <li><i class="fa fa-calendar"></i> June 7, 2016</li>
+                            <li>
+                                <i class="fa fa-folder"></i>
+                                <a href="#">Mockup</a>
+                                <a href="#">Graphics</a>
+                                <a href="#">Flayers</a>
+                            </li>
+                        </ul>
+                        <a href="#" class="read-more">read more</a>
+                    </div>
+                </div>
+
+                    <div class="post-slide">
+                      <div class="post-img">
+                          <a href="#"><img src="assets/images/img-2.jpg" alt=""></a>
+                      </div>
+                      <div class="post-content">
+                          <h3 class="post-title"><a href="#">Latest News Post</a></h3>
+                          <p class="post-description">
+                              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec elementum mauris. Praesent vehicula gravida dolor, ac efficitur sem sagittis.
+                          </p>
+                          <ul class="post-bar">
+                              <li><i class="fa fa-calendar"></i> June 7, 2016</li>
+                              <li>
+                                  <i class="fa fa-folder"></i>
+                                  <a href="#">Mockup</a>
+                                  <a href="#">Graphics</a>
+                                  <a href="#">Flayers</a>
+                              </li>
+                          </ul>
+                          <a href="#" class="read-more">read more</a>
+                      </div>
+                  </div>
+                  <div class="post-slide">
+                    <div class="post-img"><a href="#"><img src="assets/images/img-2.jpg" alt=""></a></div>
+                    <div class="post-content">
+                      <h3 class="post-title"><a href="#">Lorem ipsum dolor sit.</a></h3>
+                      <p class="post-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit aut libero in, esse ullam quam?</p>
+                      <ul class="post-bar">
+                        <li><i class="fa fa-calendar"></i>June 7, 2016</li>
+                        <li><i class="fa fa-folder"></i><a href="#">Mockup</a><a href="#">Graphics</a><a href="#">Flayers</a></li>
+                      </ul>
+                      <a href="#" class="read-more">Read More</a>
+                    </div>
+                  </div>
+                  <div class="post-slide">
+                    <div class="post-img"><a href="#"><img src="assets/images/img-2.jpg" alt=""></a></div>
+                    <div class="post-content">
+                      <h3 class="post-title"><a href="#">Mollitia hic in voluptatibus.</a></h3>
+                      <p class="post-description">Nam recusandae velit quo deserunt quisquam, placeat quidem inventore temporibus dolore, consectetur error quam libero!</p>
+                      <ul class="post-bar">
+                        <li><i class="fa fa-calendar"></i>June 7, 2016</li>
+                        <li><i class="fa fa-folder"></i><a href="#">Mockup</a><a href="#">Graphics</a><a href="#">Flayers</a></li>
+                      </ul>
+                      <a href="#" class="read-more">Read More</a>
+                    </div>
+                  </div>
+                  <div class="post-slide">
+                    <div class="post-img"><a href="#"><img src="assets/images/img-2.jpg" alt=""></a></div>
+                    <div class="post-content">
+                      <h3 class="post-title"><a href="#">Iste illum optio fuga?</a></h3>
+                      <p class="post-description">Nisi hic nihil optio aliquid, vel officiis, qui laboriosam voluptatibus consequuntur voluptas sed assumenda non!</p>
+                      <ul class="post-bar">
+                        <li><i class="fa fa-calendar"></i>June 7, 2016</li>
+                        <li><i class="fa fa-folder"></i><a href="#">Mockup</a><a href="#">Graphics</a><a href="#">Flayers</a></li>
+                      </ul>
+                      <a href="#" class="read-more">Read More</a>
+                    </div>
+                  </div>
+                  <div class="post-slide">
+                    <div class="post-img"><a href="#"><img src="assets/images/img-2.jpg" alt=""></a></div>
+                    <div class="post-content">
+                      <h3 class="post-title"><a href="#">Consectetur et quis labore.</a></h3>
+                      <p class="post-description">Maxime odit quibusdam cumque animi doloribus. Voluptates minus quisquam et veritatis esse pariatur ab ipsam!</p>
+                      <ul class="post-bar">
+                        <li><i class="fa fa-calendar"></i>June 7, 2016</li>
+                        <li><i class="fa fa-folder"></i><a href="#">Mockup</a><a href="#">Graphics</a><a href="#">Flayers</a></li>
+                      </ul>
+                      <a href="#" class="read-more">Read More</a>
+                    </div>
+                  </div>
+                  <div class="post-slide">
+                    <div class="post-img"><a href="#"><img src="assets/images/img-2.jpg" alt=""></a></div>
+                    <div class="post-content">
+                      <h3 class="post-title"><a href="#">Nihil totam voluptatum ullam.</a></h3>
+                      <p class="post-description">Voluptate laboriosam sapiente, sequi temporibus necessitatibus ipsam aliquam voluptatem dolores omnis rem officia nesciunt neque.</p>
+                      <ul class="post-bar">
+                        <li><i class="fa fa-calendar"></i>June 7, 2016</li>
+                        <li><i class="fa fa-folder"></i><a href="#">Mockup</a><a href="#">Graphics</a><a href="#">Flayers</a></li>
+                      </ul>
+                      <a href="#" class="read-more">Read More</a>
+                    </div>
+                  </div>
+                  <div class="post-slide">
+                    <div class="post-img"><a href="#"><img src="assets/images/img-2.jpg" alt=""></a></div>
+                    <div class="post-content">
+                      <h3 class="post-title"><a href="#">Perferendis aut neque doloremque?</a></h3>
+                      <p class="post-description">Iste nisi recusandae illum, ab sed a, hic reprehenderit harum illo deserunt temporibus repellat nulla?</p>
+                      <ul class="post-bar">
+                        <li><i class="fa fa-calendar"></i>June 7, 2016</li>
+                        <li><i class="fa fa-folder"></i><a href="#">Mockup</a><a href="#">Graphics</a><a href="#">Flayers</a></li>
+                      </ul>
+                      <a href="#" class="read-more">Read More</a>
+                    </div>
+                  </div>
+                  <div class="post-slide">
+                    <div class="post-img"><a href="#"><img src="assets/images/img-2.jpg" alt=""></a></div>
+                    <div class="post-content">
+                      <h3 class="post-title"><a href="#">Eligendi expedita sunt unde!</a></h3>
+                      <p class="post-description">Possimus voluptatem eum quisquam a ex consectetur quae odit doloribus, quibusdam, veniam sunt. Adipisci, tempore!</p>
+                      <ul class="post-bar">
+                        <li><i class="fa fa-calendar"></i>June 7, 2016</li>
+                        <li><i class="fa fa-folder"></i><a href="#">Mockup</a><a href="#">Graphics</a><a href="#">Flayers</a></li>
+                      </ul>
+                      <a href="#" class="read-more">Read More</a>
+                    </div>
+                  </div>
+                  <div class="post-slide">
+                    <div class="post-img"><a href="#"><img src="assets/images/img-2.jpg" alt=""></a></div>
+                    <div class="post-content">
+                      <h3 class="post-title"><a href="#">Earum totam perferendis numquam!</a></h3>
+                      <p class="post-description">Ea reprehenderit dignissimos delectus dolor fugit facilis nesciunt, tempora similique eum, consequatur voluptate aut ullam.</p>
+                      <ul class="post-bar">
+                        <li><i class="fa fa-calendar"></i>June 7, 2016</li>
+                        <li><i class="fa fa-folder"></i><a href="#">Mockup</a><a href="#">Graphics</a><a href="#">Flayers</a></li>
+                      </ul>
+                      <a href="#" class="read-more">Read More</a>
+                    </div>
+                  </div>
+                  <div class="post-slide">
+                    <div class="post-img"><a href="#"><img src="assets/images/img-2.jpg" alt=""></a></div>
+                    <div class="post-content">
+                      <h3 class="post-title"><a href="#">Quae quibusdam repudiandae officiis.</a></h3>
+                      <p class="post-description">Unde blanditiis similique, perferendis saepe sunt deleniti est qui? Est voluptates ut dolores sunt! Aliquid!</p>
+                      <ul class="post-bar">
+                        <li><i class="fa fa-calendar"></i>June 7, 2016</li>
+                        <li><i class="fa fa-folder"></i><a href="#">Mockup</a><a href="#">Graphics</a><a href="#">Flayers</a></li>
+                      </ul>
+                      <a href="#" class="read-more">Read More</a>
+                    </div>
+                  </div>
+                  <div class="post-slide">
+                    <div class="post-img"><a href="#"><img src="assets/images/img-2.jpg" alt=""></a></div>
+                    <div class="post-content">
+                      <h3 class="post-title"><a href="#">Debitis aspernatur iusto laudantium?</a></h3>
+                      <p class="post-description">Velit quae error, quos possimus animi explicabo quas eum ducimus labore, dolorum amet, voluptates iusto.</p>
+                      <ul class="post-bar">
+                        <li><i class="fa fa-calendar"></i>June 7, 2016</li>
+                        <li><i class="fa fa-folder"></i><a href="#">Mockup</a><a href="#">Graphics</a><a href="#">Flayers</a></li>
+                      </ul>
+                      <a href="#" class="read-more">Read More</a>
+                    </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      </div>
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#fff" fill-opacity="1" d="M0,96L48,128C96,160,192,224,288,213.3C384,203,480,117,576,117.3C672,117,768,203,864,202.7C960,203,1056,117,1152,117.3C1248,117,1344,203,1392,245.3L1440,288L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+  </section>
+  <script src="assets/vendors/js/glightbox.min.js"></script>
+
+  <script type="text/javascript">
+    const lightbox = GLightbox({
+      href: "https://youtu.be/wnlcuZ0mJSU?t=5",
+      type: "video",
+      source: "youtube", //vimeo, youtube or local
+      width: 900,
+    });
+  </script>
+  <script src="assets/bootstrap-5.1.1/js/bootstrap.bundle.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="./assets/Baraja-master/js/modernizr.custom.79639.js"></script>
+  <script src="./assets/Baraja-master/js/jquery.baraja.js"></script>
+  
+  <script type="text/javascript">
+    $(function () {
+
+      var $el = $('#baraja-el'),
+        baraja = $el.baraja();
+
+      // navigation
+      $('#nav-prev').on('click', function (event) {
+        baraja.previous();
       });
-      </script>
-    <script src="assets/bootstrap-5.1.1/js/bootstrap.bundle.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script type="text/javascript"> 
+
+      $('#nav-next').on('click', function (event) {
+        baraja.next();
+      });
+
+      $('#close').on('click',function (event) {
+        baraja.close();
+      });
+
+      // simple fan
+      // $('#nav-fan').on('click', function (event) {
+      //   baraja.fan({
+      //     speed: 800,
+      //     easing: 'ease',
+      //     range: 5,
+      //     direction: 'left',
+      //     origin: { x: 50, y: 500 },
+      //     center: true,
+      //     translation: 0
+      //   });
+      // });
+    });
+  </script>
+
+  <script type="text/javascript" src="./assets/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+  <script type="text/javascript" src="./assets/jquery-mousewheel-main/jquery.mousewheel.min.js"></script>
+  <script src="./assets/jquery-mousewheel-main/jquery.mousewheel.js"></script>
+  <script type="text/javascript">
     //  Searches for the similarities in the DB and forms suggestion list
-     $(document).ready(function(){ 
-       $("#med-box").keyup(function(){
-        var meds = $(this).val(); 
-        if(meds != ""){ 
-          $.ajax({ 
-            url: "load-meds.php", 
-            method: "POST", 
-            data: { meds: meds}, 
-            success: function(data){ 
+    $(document).ready(function () {
+      // Ajax config
+      $.ajax({
+        method: "POST", //we are using GET method to get all record from the server
+        url: 'load-grid.php', // get the route value
+        data: { type: "category" },
+        success: function (response) {//once the request successfully process to the server side it will return result here
+          response = JSON.parse(response);// Parse the json result
+          ar = [];
+          $sizer = 0;
+          if ($(window).width() < 576) {
+            $sizer = 2;
+          }
+          else {
+            $sizer = 6;
+          }
+          html = "";
+          $.each(response, function (key, value) {
+            function stockcheck(s) { if (s == 1) { return ("in stock"); } else { return ("out of stock"); } }
+            console.log(value.price);
+            html += '<div class="col-md-2 col-6 col-sm-6"> <div class="product-grid"> <div class="product-image"> <a href="#" class="image">';
+            html += '<img class="pic-1" src="' + value.image + '">';
+            html += '</a> <a class="add-to-cart" href="">ADD TO CART</a>'
+            if (value.offer != 0) { html += '<span class="product-offer-label">-' + value.offer + '%</span>'; }
+            if (value.sale == 1) { html += '<span class="product-sale-label"> Sale! </span>'; }
+            html += '</div> <div class="product-content">';
+            html += '<span class="product-stock">' + stockcheck(value.stock) + '</span>';
+            html += '<ul class="icon"> <li><a href="#"><i class="far fa-heart"></i></a></li> <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li> <li><a href="#"><i class="far fa-eye"></i></a></li> </ul>'
+            html += '<h3 class="title"><a href="#">' + value.label + '</a></h3>';
+            html += '<span class="category"><a href="#">' + value.company + '</a></span>';
+            html += '<div class="price">Rs.' + value.price + '</div> <ul class="rating">'
+            staricon = "";
+            for (i = 1; i < 6; i++) {
+              if (value.star < i) {
+                staricon += '<li class="fas fa-star disable"></li>';
+              }
+              else {
+                staricon += '<li class="fas fa-star"></li>';
+              }
+            }
+            html = html + staricon + '</ul> </div> </div> </div>';
+            ar.push(html);
+            html = "";
+          });
+
+          $("#shopByCategory-grid").html('<div id="Carousel-1" class="carousel slide" data-bs-ride="carousel"> <div class="carousel-inner" id="crsl-in-1"> </div><button class="carousel-control-prev ms-3" type="button" data-bs-target="#Carousel-1" data-bs-slide="prev" style=width:5%><i class="fas fa-arrow-alt-circle-left text-dark fs-1"></i><span class="visually-hidden">Previous</span></button><button class="carousel-control-next me-3" style=width:5% type="button" data-bs-target="#Carousel-1" data-bs-slide="next"><i class="fas fa-arrow-alt-circle-right text-dark fs-1"></i><span class="visually-hidden">Next</span></button></div>');
+          for (i = 0; i < ar.length / $sizer; i++) {
+            if (i == 0) {
+              $("#crsl-in-1").append('<div class="carousel-item active"><div class="row" id="crsl-row-' + i + '"></div></div>');
+            }
+            else {
+              $("#crsl-in-1").append('<div class="carousel-item"><div class="row" id="crsl-row-' + i + '"></div></div>');
+            }
+          }
+          $count = 0;
+          for (j = 0; j < ar.length; j++) {
+            console.log(j);
+            $("#crsl-row-" + $count).append(ar[j]);
+            p = j + 1;
+            if (p % $sizer == 0) {
+              $count = $count + 1;
+            }
+          }
+        }
+      });
+      // SHOP BY OFFER GRID POPULATOR CODE
+      $.ajax({
+        method: "POST", //we are using GET method to get all record from the server
+        url: 'load-grid.php', // get the route value
+        data: { type: "offer" },
+        success: function (response) {//once the request successfully process to the server side it will return result here
+          response = JSON.parse(response);// Parse the json result
+          ar = [];
+          $sizer = 0;
+          if ($(window).width() < 576) {
+            $sizer = 2;
+          }
+          else {
+            $sizer = 6;
+          }
+          html = "";
+          $.each(response, function (key, value) {
+            function stockcheck(s) { if (s == 1) { return ("in stock"); } else { return ("out of stock"); } }
+            console.log(value.price);
+            html += '<div class="col-md-2 col-6 col-sm-6"> <div class="product-grid"> <div class="product-image"> <a href="#" class="image">';
+            html += '<img class="pic-1" src="' + value.image + '">';
+            html += '</a> <a class="add-to-cart" href="">ADD TO CART</a>'
+            if (value.offer != 0) { html += '<span class="product-offer-label">-' + value.offer + '%</span>'; }
+            if (value.sale == 1) { html += '<span class="product-sale-label"> Sale! </span>'; }
+            html += '</div> <div class="product-content">';
+            html += '<span class="product-stock">' + stockcheck(value.stock) + '</span>';
+            html += '<ul class="icon"> <li><a href="#"><i class="far fa-heart"></i></a></li> <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li> <li><a href="#"><i class="far fa-eye"></i></a></li> </ul>'
+            html += '<h3 class="title"><a href="#">' + value.label + '</a></h3>';
+            html += '<span class="category"><a href="#">' + value.company + '</a></span>';
+            html += '<div class="price">Rs.' + value.price + '</div> <ul class="rating">'
+            staricon = "";
+            for (i = 1; i < 6; i++) {
+              if (value.star < i) {
+                staricon += '<li class="fas fa-star disable"></li>';
+              }
+              else {
+                staricon += '<li class="fas fa-star"></li>';
+              }
+            }
+            html = html + staricon + '</ul> </div> </div> </div>';
+            ar.push(html);
+            html = "";
+          });
+
+          $("#shopByOffer-grid").html('<div id="Carousel-2" class="carousel slide" data-bs-ride="carousel"> <div class="carousel-inner" id="crsl-in-2"> </div><button class="carousel-control-prev ms-3" type="button" data-bs-target="#Carousel-2" data-bs-slide="prev" style=width:5%><i class="fas fa-arrow-alt-circle-left text-dark fs-1"></i><span class="visually-hidden">Previous</span></button><button class="carousel-control-next me-3" style=width:5% type="button" data-bs-target="#Carousel-2" data-bs-slide="next"><i class="fas fa-arrow-alt-circle-right text-dark fs-1"></i><span class="visually-hidden">Next</span></button></div>');
+          for (i = 0; i < ar.length / $sizer; i++) {
+            if (i == 0) {
+              $("#crsl-in-2").append('<div class="carousel-item active"><div class="row" id="crsl2-row-' + i + '"></div></div>');
+            }
+            else {
+              $("#crsl-in-2").append('<div class="carousel-item"><div class="row" id="crsl2-row-' + i + '"></div></div>');
+            }
+          }
+          $count = 0;
+          for (j = 0; j < ar.length; j++) {
+            console.log(j);
+            $("#crsl2-row-" + $count).append(ar[j]);
+            p = j + 1;
+            if (p % $sizer == 0) {
+              $count = $count + 1;
+            }
+          }
+        }
+      });
+
+      $("#med-box").keyup(function () {
+        var meds = $(this).val();
+        if (meds != "") {
+          $.ajax({
+            url: "load-meds.php",
+            method: "POST",
+            data: { meds: meds },
+            success: function (data) {
               console.log(data);
               $("#medsList").fadeIn("fast").html(data);
-            }}); 
-          }else{
-            $("#medsList").fadeOut();
-          }
-          function calcValOfMedboxWidth() {
-            var num= $("#med-box").css("width");
-            return num;
-          }
-          $("#medsList").css("width",calcValOfMedboxWidth());
-          console.log(calcValOfMedboxWidth());
-         }); 
-        });
-
-        // Copies the text from the user selected list option and fills it inside the searchbox
-        $(document).on('click' , '#medsList li' , function(){
-          $('#med-box').val($(this).text());
-          $(this).toggleClass("active");
-          $("#medsList").fadeOut();
-        });
-
-        // Hides the suggestions div when textbox focus is lost
-       $(function() {
-          $('#med-box').focusout(function() {
-            $('#medsList').fadeOut();
-            });
-          });
-        
-
-        //This function expands the textbox size when clicked
-        $(function() {  
-          $('#med-box').focusin(function() {
-            $( "#med-box" ).animate({
-              width: "50vh",
-              right: "+=50"
-             }, 500);
-            }); 
-          });
-
-          // This function changes color of button to primary and text to white
-          $("#srh-btn").hover(
-            function () {
-              $(this).find('i').addClass("text-white");
-              $(this).find('i').removeClass("text-primary");
-            },
-            function () {
-              $(this).find('i').addClass("text-primary");
-              $(this).find('i').removeClass("text-white");
             }
-          );
-
-          $(window).bind('resize', function()
-      {
-        
+          });
+        } else {
+          $("#medsList").fadeOut();
+        }
+        function calcValOfMedboxWidth() {
+          var num = $("#med-box").css("width");
+          return num;
+        }
+        $("#medsList").css("width", calcValOfMedboxWidth());
+        console.log(calcValOfMedboxWidth());
       });
-      </script>
-  </body>
+// Initializing Owl Carousel 2.3.4
+       $("#news-slider").owlCarousel({
+        items:4,
+        nav:false,
+        responsive:{
+          0:{
+            items:1
+          },
+          800:{
+            items:4
+          }
+        }
+        });
+        $('#news-slider').on('mousewheel', '.owl-stage', function (e) {
+    if (e.deltaY>0) {
+      $('#news-slider').trigger('next.owl');
+    } else {
+      $('#news-slider').trigger('prev.owl');
+    }
+    e.preventDefault();
+});
+    });
+    
+    
+
+    // Copies the text from the user selected list option and fills it inside the searchbox
+    $(document).on('click', '#medsList li', function () {
+      $('#med-box').val($(this).text());
+      $(this).toggleClass("active");
+      $("#medsList").fadeOut();
+    });
+
+    // Hides the suggestions div when textbox focus is lost
+    $(function () {
+      $('#med-box').focusout(function () {
+        $('#medsList').fadeOut();
+      });
+    });
+
+
+    //This function expands the textbox size when clicked
+    $(function () {
+      if ($(window).width() >= 576) {
+        $('#med-box').focusin(function () {
+          $("#med-box").animate({
+            width: "50vh",
+            right: "+=50"
+          }, 500);
+        });
+      }
+    });
+
+    // This function changes color of button to primary and text to white
+    $("#srh-btn").hover(
+      function () {
+        $(this).find('i').addClass("text-white");
+        $(this).find('i').removeClass("text-primary");
+      },
+      function () {
+        $(this).find('i').addClass("text-primary");
+        $(this).find('i').removeClass("text-white");
+      }
+    );
+
+    $(window).bind('resize', function () {
+
+    });
+  </script>
+</body>
+
 </html>

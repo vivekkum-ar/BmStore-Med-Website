@@ -11235,23 +11235,9 @@ textarea.form-control-lg {
   }
 }
 
-.heading-line::before {
+.heading-lines {
   content: "";
-  width: 10rem;
-  height: 0.1rem;
-  display: block;
-  background-color: #ff00cc;
   margin: 0 auto;
-}
-
-.heading-line::after {
-  content: "";
-  width: 2rem;
-  height: 0.2rem;
-  padding-top: 0.5rem;
-  display: block;
-  background-color: #ff00cc;
-  margin: 0 auto 1rem auto;
 }
 
 .display-3 {
@@ -11526,6 +11512,206 @@ textarea.form-control-lg {
   top: 10px;
   right: -30px;
   z-index: 1;
+}
+
+.product-offer-label {
+  color: #fff;
+  background: #f4524d;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 25px;
+  height: 23px;
+  padding: 0 20px 0 8px;
+  position: absolute;
+  top: 10px;
+  right: 1;
+  clip-path: polygon(0% 100%, 0% 0%, 100% 0%, 80% 50%, 100% 100%);
+}
+
+@media (max-width: 767.98px) {
+  .intro-section {
+    padding: 5rem 0 0 0;
+  }
+}
+.intro-section {
+  padding: 7rem 0 0 0;
+}
+
+.baraja-review-div {
+  width: 200px;
+  margin: 30px auto;
+  color: #aaa;
+}
+
+.baraja-review-div {
+  width: auto;
+}
+
+.baraja-review-div h4 {
+  color: #666;
+  font-size: 14px;
+  padding: 8px 10px 5px;
+  margin: 20px 3px 5px;
+  border-bottom: 2px solid #807f7f;
+}
+
+.baraja-review-div p {
+  font-size: 12px;
+  font-weight: 700;
+  padding: 0 0px 0px 0px;
+  margin: 10px 3px 0;
+}
+
+.baraja-review-div ul.baraja-container li {
+  border-radius: 10px;
+  padding: 5px;
+  box-shadow: 0em 1px 0.5em rgba(0, 0, 0, 0.08);
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.baraja-review-div li img {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+
+ul.baraja-container {
+  width: 200px;
+  height: 310px;
+  margin: 0 auto 30px;
+  position: relative;
+  padding: 0;
+  list-style-type: none;
+}
+
+ul.baraja-container li {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  background: #fff;
+  pointer-events: auto;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.testimonials {
+  position: relative;
+  padding: 0;
+  background: linear-gradient(to right, rgba(255, 0, 204, 0.95), rgba(51, 51, 153, 0.95));
+}
+
+.post-slide {
+  margin: 0 15px;
+}
+
+.post-slide .post-img {
+  overflow: hidden;
+}
+
+.post-slide .post-img img {
+  width: 100%;
+  height: auto;
+  transform: scale(1);
+  transition: all 1s ease-in-out 0s;
+}
+
+.post-slide:hover .post-img img {
+  transform: scale(1.08);
+}
+
+.post-slide .post-content {
+  background: #fff;
+  padding: 20px;
+}
+
+.post-slide .post-title {
+  font-size: 17px;
+  font-weight: 600;
+  margin-top: 0;
+  text-transform: capitalize;
+}
+
+.post-slide .post-title a {
+  display: inline-block;
+  color: #808080;
+  transition: all 0.3s ease 0s;
+}
+
+.post-slide .post-title a:hover {
+  color: #3d3030;
+  text-decoration: none;
+}
+
+.post-slide .post-description {
+  font-size: 15px;
+  color: #676767;
+  line-height: 24px;
+  margin-bottom: 14px;
+}
+
+.post-slide .post-bar {
+  padding: 0;
+  margin-bottom: 15px;
+  list-style: none;
+}
+
+.post-slide .post-bar li {
+  color: #676767;
+  padding: 2px 0;
+}
+
+.post-slide .post-bar li i {
+  margin-right: 5px;
+}
+
+.post-slide .post-bar li a {
+  display: inline-block;
+  font-size: 12px;
+  color: #808080;
+  transition: all 0.3s ease 0s;
+}
+
+.post-slide .post-bar li a:after {
+  content: ",";
+}
+
+.post-slide .post-bar li a:last-child:after {
+  content: "";
+}
+
+.post-slide .post-bar li a:hover {
+  color: #3d3030;
+  text-decoration: none;
+}
+
+.post-slide .read-more {
+  display: inline-block;
+  padding: 10px 15px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  background: #e7989a;
+  border-bottom-right-radius: 10px;
+  text-transform: capitalize;
+  transition: all 0.3s linear;
+}
+
+.post-slide .read-more:hover {
+  background: #333;
+  text-decoration: none;
 }
 
 .menu {
