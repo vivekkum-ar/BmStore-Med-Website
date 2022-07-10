@@ -12,9 +12,6 @@
   <link rel="stylesheet" href="assets/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css" />
   <link rel="stylesheet" href="assets/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css" />
   <link rel="stylesheet" href="node_modules/animate.css/animate.min.css">
-  <!-- <link rel="stylesheet" href="./assets/Baraja-master/css/baraja.css" />
-    <link rel="stylesheet" href="./assets/Baraja-master/css/demo.css">
-    <link rel="stylesheet" href="./assets/Baraja-master/css/custom.css"> -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
     rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:400,500,600,700" rel="stylesheet" />
@@ -35,7 +32,7 @@
       <div class="collapse navbar-collapse justify-content-end dropdown" id="navbarNav">
         <form class="d-flex animate__animated animate__lightSpeedInRight" id="search-form" autocomplete="off">
           <input class="form-control me-2 rounded-pill border border-1" id="med-box" type="search"
-            placeholder="Search Medicines" aria-label="Search" />
+            placeholder="Search Medicines" aria-label="Search"/>
           <button id="srh-btn" class="btn btn-outline-primary border border-2 border-primary rounded-pill"
             style="transform: translateX(-52px)" type="submit" id="search-btn">
             <b><i class="fas fa-search-plus text-primary"></i></b>
@@ -45,8 +42,11 @@
               <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
               <li class="nav-item"><a class="nav-link" href="#">Testimonials</a></li>
               <li class="nav-item"><a class="nav-link" href="#">faq</a></li> -->
-            <li class="nav-item">
-              <a class="nav-link" href="#">Login/Signup</a>
+            <li class="nav-item login-register-link">
+              <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#myModal">Login/Signup</a>
+            </li>
+            <li class="nav-item logout-link">
+            <a class="nav-link" href="#" onclick="window.location.reload()">Logout</a>
             </li>
           </ul>
           <div class="overflow-auto dropdown-content"
@@ -74,8 +74,8 @@
             <span class="display-2--intro">Medicine & Wellness </span>
             <span class="display-2--description lh-1">
               <p class="fst-italic mx-0 my-1 py-0">
-                “Time and health are two precious assets that we don’t
-                recognize and appreciate until they have been depleted.”
+                <sup><i class="fas fa-quote-left text-white"></i></sup>Time and health are two precious assets that we don’t
+                recognize and appreciate until they have been depleted. <sup><i class="fas fa-quote-right text-white"></i></sup>
               </p>
               <br />
               <p class="text-end fw-bold fst-italic mx-0 my-1 py-0 lh-1" style="transform: translate(0px, -80%)">
@@ -165,7 +165,30 @@
       <div class="row" id="shopByOffer-grid"></div>
     </div>
   </section>
-  <!-- Reviews section -->
+  <!--==============================================================================================-->
+  <!--!====================================== ARTICLES SECTION =====================================-->
+  <!--==============================================================================================-->
+  <section id="articles" class="articles">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#fff" fill-opacity="1" d="M0,96L48,128C96,160,192,224,288,213.3C384,203,480,117,576,117.3C672,117,768,203,864,202.7C960,203,1056,117,1152,117.3C1248,117,1344,203,1392,245.3L1440,288L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
+    <div class="container">
+      <div class="row text-white">
+        <h1 class="display-3 text-center fw-bold">
+          Articles & Blogs
+        </h1>
+        <hr style="width: 100px; height: 3px;" class="mx-auto">
+        <div class="row">
+          <div class="col-md-12">
+              <div id="news-slider" class="owl-carousel owl-theme">
+              </div>
+          </div>
+      </div>
+      </div>
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#fff" fill-opacity="1" d="M0,96L48,128C96,160,192,224,288,213.3C384,203,480,117,576,117.3C672,117,768,203,864,202.7C960,203,1056,117,1152,117.3C1248,117,1344,203,1392,245.3L1440,288L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+  </section>
+  <!--==============================================================================================-->
+  <!--!======================================= REVIEWS SECTION =====================================-->
+  <!--==============================================================================================-->
   <section>
     <div class="ms-5 me-5 icon d-block fas fa-users mt-5" style="font-size: 2.5rem; color: #ff00cc">
       <br />
@@ -255,25 +278,417 @@
     </div>
       </div>
   </section>
-
-  <section id="testimonials" class="testimonials">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#fff" fill-opacity="1" d="M0,96L48,128C96,160,192,224,288,213.3C384,203,480,117,576,117.3C672,117,768,203,864,202.7C960,203,1056,117,1152,117.3C1248,117,1344,203,1392,245.3L1440,288L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
-    <div class="container">
-      <div class="row text-center text-white">
-        <h1 class="display-3 fw-bold">
-          Articles & Blogs
-        </h1>
-        <hr style="width: 100px; height: 3px;" class="mx-auto">
-        <div class="row">
-          <div class="col-md-12">
-              <div id="news-slider" class="owl-carousel owl-theme">
+<!--==============================================================================================-->
+<!--------------------------------- HEALTH CONDITION SECTION --------------------------------------->
+<!--==============================================================================================-->
+  <section id="healthConditions">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <div id="health-condition-div" class="owl-carousel owl-theme">
+           
+            <div class="health-grid-hc">
+              <div class="health-image-hc">
+                <a href="#" class="image-hc">
+                  <img src="./assets/images/arts/firstaid.jpg">
+                </a>
+                <span class="product-hot-label-hc">hot</span>
               </div>
+              <div class="product-content-hc">
+                <h3 class="title-hc"><a href="#">First Aid</a></h3>
+                <div class="price-hc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi excepturi commodi totam dolore
+                  voluptas.</div>
+              </div>
+            </div>
+
+              <div class="health-grid-hc">
+                  <div class="health-image-hc">
+                      <a href="#" class="image-hc">
+                          <img src="./assets/images/arts/diabetes.jpg">
+                      </a>
+                      <span class="product-hot-label-hc">hot</span>
+                  </div>
+                  <div class="product-content-hc">
+                      <h3 class="title-hc"><a href="#">Diabetes</a></h3>
+                      <div class="price-hc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi excepturi commodi totam dolore voluptas.</div>
+                  </div>
+              </div>
+          
+          
+              <div class="health-grid-hc">
+                  <div class="health-image-hc">
+                      <a href="#" class="image-hc">
+                          <img src="./assets/images/arts/fever.jpg">
+                      </a>
+                  </div>
+                  <div class="product-content-hc">
+                      <h3 class="title-hc"><a href="#">Cold / Fever</a></h3>
+                      <div class="price-hc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi excepturi commodi totam dolore voluptas.</div>
+                  </div>
+              </div>
+          
+          
+            <div class="health-grid-hc">
+                <div class="health-image-hc">
+                    <a href="#" class="image-hc">
+                        <img src="./assets/images/arts/weightloss.png">
+                    </a>
+                </div>
+                <div class="product-content-hc">
+                    <h3 class="title-hc"><a href="#">Weightloss / Fitness</a></h3>
+                    <div class="price-hc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi excepturi commodi totam dolore voluptas.</div>
+                </div>
+            </div>
+        
+        
+          <div class="health-grid-hc">
+            <div class="health-image-hc">
+              <a href="#" class="image-hc">
+                <img src="./assets/images/arts/jointpain.jpg">
+              </a>
+            </div>
+            <div class="product-content-hc">
+              <h3 class="title-hc"><a href="#">Body / Joint Pain</a></h3>
+              <div class="price-hc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi excepturi commodi totam
+                dolore voluptas.</div>
+            </div>
+          </div>
+        
+          <div class="health-grid-hc">
+            <div class="health-image-hc">
+              <a href="#" class="image-hc">
+                <img src="./assets/images/arts/womencare.png">
+              </a>
+            </div>
+            <div class="product-content-hc">
+              <h3 class="title-hc"><a href="#">Women Care</a></h3>
+              <div class="price-hc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi excepturi commodi totam
+                dolore voluptas.</div>
+            </div>
+          </div>
+        
+        
+          <div class="health-grid-hc">
+            <div class="health-image-hc">
+              <a href="#" class="image-hc">
+                <img src="./assets/images/arts/lungcare.jpg">
+              </a>
+            </div>
+            <div class="product-content-hc">
+              <h3 class="title-hc"><a href="#">Lung Care</a></h3>
+              <div class="price-hc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi excepturi commodi totam
+                dolore voluptas.</div>
+            </div>
+          </div>
+        
+       
+          <div class="health-grid-hc">
+            <div class="health-image-hc">
+              <a href="#" class="image-hc">
+                <img src="./assets/images/arts/deaddiction.jpg">
+              </a>
+            </div>
+            <div class="product-content-hc">
+              <h3 class="title-hc"><a href="#">Deaddiction</a></h3>
+              <div class="price-hc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi excepturi commodi totam
+                dolore voluptas.</div>
+            </div>
+          </div>
+        
+       
+          <div class="health-grid-hc">
+            <div class="health-image-hc">
+              <a href="#" class="image-hc">
+                <img src="./assets/images/arts/eyecare.jpg">
+              </a>
+            </div>
+            <div class="product-content-hc">
+              <h3 class="title-hc"><a href="#">Eye Care</a></h3>
+              <div class="price-hc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi excepturi commodi totam
+                dolore voluptas.</div>
+            </div>
+          </div>
+        
+        
+          <div class="health-grid-hc">
+            <div class="health-image-hc">
+              <a href="#" class="image-hc">
+                <img src="./assets/images/arts/stomachache.jpg">
+              </a>
+            </div>
+            <div class="product-content-hc">
+              <h3 class="title-hc"><a href="#">Stomach Care</a></h3>
+              <div class="price-hc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi excepturi commodi totam
+                dolore voluptas.</div>
+            </div>
+          </div>
+        
           </div>
       </div>
+    </div>
+    </div>
+  </section>
+<!--==============================================================================================-->
+<!--!========================================= LOGIN MODAL =======================================-->
+<!--==============================================================================================-->
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="modal-box">
+            <!-- Modal -->
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content clearfix">
+                  <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true"
+                      class="fs-5 align-text-top">x</span></button>
+                  <div class="modal-body">
+                    <h3 class="title">Login</h3>
+                    <p class="description login-alert-description">Please enter your credentials to proceed</p>
+
+                    <!-- <form action="login.php" method="post"> -->
+                      <div class="form-group">
+                        <span class="input-icon"><i class="fa fa-user"></i></span>
+                        <input type="text" name="username" class="form-control un-login" placeholder="Enter email">
+                      </div>
+                      <div class="form-group">
+                        <span class="input-icon"><i class="fas fa-key"></i></span>
+                        <input type="password" name="password" class="form-control ps-login" placeholder="Password">
+                      </div>
+                      <div class="form-group checkbox d-flex align-items-center">
+                        <input type="checkbox" class="checkBox_Item1">
+                        <label class="checkBox_Login">Remember me</label>
+                        <a href="" class="forgot-pass text-decoration-none">Forgot Password?</a>
+                      </div>
+                      <p class="description">Don't have an account? <a href="" data-bs-toggle="modal" data-bs-target="#myModal2" class="text-decoration-none">Register here</a></p>
+                      <button class="submit submit-login">Login</button>
+                      <button class="refresh-login d-none" onClick="document.location.reload();" >refresh</button>
+                    <!-- </form> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#fff" fill-opacity="1" d="M0,96L48,128C96,160,192,224,288,213.3C384,203,480,117,576,117.3C672,117,768,203,864,202.7C960,203,1056,117,1152,117.3C1248,117,1344,203,1392,245.3L1440,288L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
   </section>
+
+<!--==============================================================================================-->
+<!--!======================================= REGISTER MODAL ======================================-->
+<!--==============================================================================================-->
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="modal-box">
+          <!-- Modal -->
+          <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content clearfix">
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true"
+                    class="fs-5 align-text-top">x</span></button>
+                <div class="modal-body">
+                  <h3 class="title">Register</h3>
+                  <p class="description register-alert-description">It's good to have you onboard</p>
+                  <!-- <form action="register.php" method="post"> -->
+                    <div class="form-group">
+                      <span class="input-icon"><i class="fa fa-user"></i></span>
+                      <input type="text" name="username" class="form-control un-register" placeholder="Enter email">
+                    </div>
+                    <div class="form-group">
+                      <span class="input-icon"><i class="fas fa-key"></i></span>
+                      <input type="password" name="password" class="form-control ps-register" placeholder="Password">
+                    </div>
+                    <div class="form-group">
+                      <span class="input-icon"><i class="fas fa-key"></i></span>
+                      <input type="password" name="confirm_password" class="form-control cnfm-ps-register" placeholder="Confirm password">
+                    </div>
+                    <div class="form-group checkbox">
+                      <input type="checkbox" class="checkBox_Item2">
+                      <label class="checkBox_Register">I accept all the <a href="http://" class="text-decoration-none">Terms & Conditions</a></label>
+                    </div>
+                    <!-- <a href="" class="forgot-pass">Forgot Password?</a> -->
+                    <p class="description">Already have an account? <a href="" data-bs-toggle="modal" data-bs-target="#myModal" class="text-decoration-none">Login here</a></p>
+                    <button class="submit submit-register">Register</button>
+                  <!-- </form> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  
+  
+<footer class="footer">
+  <div style="background-color: rgb(223, 223, 223);">
+    <div class="row container mx-auto" style="background-color: rgb(223, 223, 223);">
+      <h2 class="display-3--title text-center mb-3"><br>Stay Healthy with Tata 1mg: Your Favourite Online Pharmacy and Healthcare Platform</h2><img src="assets/images/logo.png" alt="logo" class="mx-auto img-thumbnail w-25 img-fluid rounded-pill py-50" style="background: linear-gradient(to right, #ff00cc, #333399); transition: all 0.3s ease-in-out;"><h3 class="display-3--title text-center mt-3">We Bring Care to Health.</h3><p>Tata 1mg is India's leading digital healthcare platform. From doctor
+        consultations on chat to online pharmacy and lab tests at home: we
+        have it all covered for you. Having delivered over 25 million orders
+        in 1000+ cities till date, we are on a mission to bring "care" to
+        "health" to give you a flawless healthcare experience.</p><h3 class="display-3--title text-center">Tata 1mg: Your Favourite Online Pharmacy! </h3><p>Tata 1mg is India's leading online chemist with over 2 lakh medicines
+        available at the best prices. We are your one-stop destination for
+        other healthcare products as well, such as over the counter
+        pharmaceuticals, healthcare devices and homeopathy and ayurveda
+        medicines.</p><p>With Tata 1mg, you can buy medicines online and get them delivered at
+        your doorstep anywhere in India! But, is ordering medicines online a
+        difficult process? Not at all! Simply search for the products you
+        want to buy, add to cart and checkout. Now all you need to do is sit
+        back as we get your order delivered to you.</p><p>In case you need assistance, just give us a call and we will help you complete your order.</p><p>Don't want to go through the hassle of adding each medicine
+        separately? You can simply upload your prescription and we will
+        place your order for you. And there is more! At Tata 1mg, you can buy
+        health products and medicines online at best discounts.</p><p>Now, isn't that easy? Why go all the way to the medicine store and
+        wait in line, when you have Tata 1mg Pharmacy at your service.</p><h3 class="display-3--title text-center">The Feathers in Our Cap</h3><p>At Tata 1mg, our goal is to make healthcare understandable, accessible
+        and affordable in India. We set out on our journey in 2015, and have
+        come a long way since then. Along the way, we have been conferred
+        with prestigious titles like <b>BML Munjal Award for 'Business Excellence through Learning and
+          Development', Best Online Pharmacy in India Award</b> <!-- -->and <b>Top 50 venture in The Smart CEO-Startup50 India.</b> <!-- -->We have been selected as the only company from across the globe for<b> <!-- -->SD#3 "Health &amp; Well Being for all" by Unreasonable group, US State
+          Department.</b> <!-- -->In 2019 alone we received three awards including the<b> <!-- -->BMW Simply Unstoppable Award.</b></p><h3 class="display-3--title text-center">The Services We Offer</h3><p>Tata 1mg is India's leading digital healthcare platform, where you can buy medicines online with discount. Buy medicine online in Delhi, Mumbai, Bangalore, Hyderabad, Pune, Gurgaon, Noida, Kolkata, Chennai, Ahmedabad, Lucknow and around a 1000 more cities. Besides delivering your online medicine order at your doorstep, we provide accurate, authoritative &amp; trustworthy information on medicines and help people use their medicines effectively and safely.</p><p>We also facilitate lab tests at home. You can avail over 2,000 tests and get tested by 120+ top and verified labs at the best prices. Need to consult a doctor? On our platform, you can talk to over 20 kinds of specialists in just a few clicks.</p><p>Customer centricity is the core of our values. Our team of highly
+        trained and experienced doctors, phlebotomists and pharmacists looks
+        into each order to give you a fulfilling experience.</p><p>We’ve made healthcare accessible to millions by giving them quality care at affordable prices. Customer centricity is the core of our values. Our team of highly trained and experienced doctors, phlebotomists and pharmacists looks into each order to give you a fulfilling experience.</p><p>Visit our online medical store now, and avail online medicine purchase at a discount.<br>Stay Healthy!</p>
+    </div>
+  </div>
+    <div class="container">
+      <div class="row">
+        <!-- CONTENT FOR NUMBER -->
+        <div class="col-md-4 col-lg-4 contact-box pt-1 d-md-block d-lg-flex d-flex">
+          <div class="contact-box__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-phone-call" viewBox="0 0 24 24" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+              <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
+              <path d="M15 7a2 2 0 0 1 2 2" />
+              <path d="M15 3a6 6 0 0 1 6 6" />
+            </svg>
+          </div>
+          <div class="contact-box__info">
+            <a href="" class="contact-box__info--title">+1 728365413</a>
+            <p class="contact-box__info--subtitle">  Mon-Fri 9am-6pm</p>
+          </div>
+        </div>
+        <!-- CONTENT FOR EMAIL -->
+        <div class="col-md-4 col-lg-4 contact-box pt-1 d-md-block d-lg-flex d-flex">
+          <div class="contact-box__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mail-opened" viewBox="0 0 24 24" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+              <polyline points="3 9 12 15 21 9 12 3 3 9" />
+              <path d="M21 9v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10" />
+              <line x1="3" y1="19" x2="9" y2="13" />
+              <line x1="15" y1="13" x2="21" y2="19" />
+            </svg>
+          </div>
+          <div class="contact-box__info">
+            <a href="" class="contact-box__info--title">info@company.com</a>
+            <p class="contact-box__info--subtitle">Online support</p>
+          </div>
+        </div>
+        <!-- CONTACT FOR LOCATION -->
+        <div class="col-md-4 col-lg-4 contact-box pt-1 d-md-block d-lg-flex d-flex">
+          <div class="contact-box__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-2" viewBox="0 0 24 24" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+              <line x1="18" y1="6" x2="18" y2="6.01" />
+              <path d="M18 13l-3.5 -5a4 4 0 1 1 7 0l-3.5 5" />
+              <polyline points="10.5 4.75 9 4 3 7 3 20 9 17 15 20 21 17 21 15" />
+              <line x1="9" y1="4" x2="9" y2="17" />
+              <line x1="15" y1="15" x2="15" y2="20" />
+            </svg>
+          </div>
+          <div class="contact-box__info">
+            <a href="" class="contact-box__info--title">New York, USA</a>
+            <p class="contact-box__info--subtitle">NY 10012, US</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- START THE SOCIAL MEDIA CONTENT -->
+    <div class="footer-sm" style="background-color: #212121;">
+      <div class="container">
+        <div class="row py-4 text-center text-white">
+          <div class="col-lg-5 col-md-6 mb-4 mb-md-0 text-capitalize">
+            connect with us on social media
+          </div>
+          <div class="col-lg-7 col-md-6 magix">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  <!-- START THE CONTENT FOR COMPANY INFO -->
+  <div class="container mt-5">
+    <div class="row text-white justify-content-center mt-3 pb-3">
+      <div class="col-12 col-sm-6 col-lg-6">
+        <h5 class="text-capitalize-fw-bold">
+          Company Name
+        </h5>
+        <hr class="bg-white d-inline-block mb-4" style="width: 60px; height: 2px;">
+        <p class="lh-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita ullam vitae doloribus similique itaque officia, explicabo sunt!</p>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-2 mb-4 mx-auto">
+        <h5 class="text-capitalize-fw-bold">
+          Products
+        </h5>
+        <hr class="bg-white d-inline-block mb-4" style="width: 60px; height: 2px;">
+        <ul class="list-inline company-list">
+          <li><a href="#">Lorem Ipsum</a></li>
+          <li><a href="#">Lorem Ipsum</a></li>
+          <li><a href="#">Lorem Ipsum</a></li>
+          <li><a href="#">Lorem Ipsum</a></li>
+        </ul>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-2 mb-4 mx-auto">
+        <h5 class="text-capitalize-fw-bold">
+          Useful Links
+        </h5>
+        <hr class="bg-white d-inline-block mb-4" style="width: 60px; height: 2px;">
+        <ul class="list-inline company-list">
+          <li><a href="#">Your Account</a></li>
+          <li><a href="#">Become an Affiliate</a></li>
+          <li><a href="#">Create an Account</a></li>
+          <li><a href="#">Help</a></li>
+        </ul>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-2 mb-4 mx-auto">
+        <h5 class="text-capitalize-fw-bold">
+          Contact
+        </h5>
+        <hr class="bg-white d-inline-block mb-4" style="width: 60px; height: 2px;">
+        <ul class="list-inline company-list">
+          <li><a href="#">Lorem Ipsum</a></li>
+          <li><a href="#">Lorem Ipsum</a></li>
+          <li><a href="#">Lorem Ipsum</a></li>
+          <li><a href="#">Lorem Ipsum</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+  <!-- START THE COPYRIGHT PART OF FOOTER -->
+  <div class="footer-bottom pt-5 pb-5">
+    <div class="container">
+      <div class="row text-center text-white">
+        <div class="col-12">
+          <div class="footer-bottom__copyright">
+            &COPY; Copyright 2021 <a href="#">Company</a> | Created by <a href="http://twitter.com/vivekkum-ar" target="_blank">Vivek</a> 
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  <script type="text/javascript">
+    
+  </script>
   <script src="assets/vendors/js/glightbox.min.js"></script>
 
   <script type="text/javascript">
@@ -286,6 +701,26 @@
   </script>
   <script src="assets/bootstrap-5.1.1/js/bootstrap.bundle.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="./assets/autotyperjs-master/dist/autotyper.min.js"></script>
+  <script type="text/javascript">
+    
+			// custom options
+			var options = {
+				selector: ".typer-target", // target element selector
+				words: ["Hello World..."], // words/sentences that will be auto typed
+				charSpeed: 85, // letter typing animation speed
+				delay: 2100, // word/sentence typing animation delay
+				loop: false, // if loop is activated, autoTyper will start over
+				flipflop: false // if flipflop is activated, letters which are typed animated will be removed ony by one animated
+			};
+
+			var typer = new autoTyper(options);
+
+			document.getElementById("med-box").addEventListener("click", function(e) {
+				typer.start();
+			});
+		
+  </script>
   <script src="./assets/Baraja-master/js/modernizr.custom.79639.js"></script>
   <script src="./assets/Baraja-master/js/jquery.baraja.js"></script>
   <script type="text/javascript">
@@ -329,22 +764,208 @@
     /**================================================================================================
      *!                              Text ellipsis effect using Clamp.JS
      *================================================================================================**/
-     function textclamp(){for(jk=0; jk < 15; jk++){
-      $clamp(document.getElementsByClassName("post-description")[jk], {clamp: 3});
-      $clamp(document.getElementsByClassName("post-title")[jk].getElementsByTagName("a")[0], {clamp: 1});
+     function textclamp(){for(j=0; j < 15; j++){
+       if(window.innerWidth<800){
+      $clamp(document.getElementsByClassName("post-description")[j], {clamp: 5});
+      $clamp(document.getElementsByClassName("post-title")[j].getElementsByTagName("a")[0], {clamp: 2});
+       }
+       else{
+      $clamp(document.getElementsByClassName("post-description")[j], {clamp: 3});
+      $clamp(document.getElementsByClassName("post-title")[j].getElementsByTagName("a")[0], {clamp: 1});
+       }
+      $clamp(document.getElementsByClassName("detes")[j], {clamp: 1});
     } }
   </script>
   <script type="text/javascript" src="./assets/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
   <script type="text/javascript" src="./assets/jquery-mousewheel-main/jquery.mousewheel.min.js"></script>
   <script type="text/javascript">
+
+  </script>
+  <script type="text/javascript">
+      $(document).ready(function () {
+        
+          $(".logout-link").toggleClass("d-none",true);
+          $(".login-register-link").toggleClass("d-none",false); 
+
+        // if (loginstatus == true) {
+        //   console.log(loginstatus);
+        //   $(".logout-link").toggleClass("d-none",false);
+        //   $(".login-register-link").toggleClass("d-none",true);
+        // }
+         $.ajax({
+         method: "POST", //we are using GET method to get all record from the server
+         url: 'login.php', // get the route value
+         data: "",
+         dataType: "json",
+         encode: true,
+         }).done(function (data) {
+         console.log(data);
+    //     // var result = $.parseJSON(data);
+    //     // console.log(result);
+         for(i=0; i < data.length; i++){
+           if(data[i] != ""){
+             error_txt = data[i];
+    //         console.log(error_txt);
+           }
+         }
+         if(error_txt == "kaytwenter"){
+          console.log("done!!");
+           $(".logout-link").toggleClass("d-none",false);
+           $(".login-register-link").toggleClass("d-none",true);
+          }
+     });
+      
+  /**================================================================================================
+  *!                                          REGISTER CODE 
+  *================================================================================================**/
+  $(document).on('click', ".submit-register", function(){
+      error_txt="";
+      var formData = {
+      username: $(".un-register").val(),
+      password: $(".ps-register").val(),
+      confirm_password: $(".cnfm-ps-register").val(),
+    };
+    
+      $.ajax({
+        method: "POST", //we are using GET method to get all record from the server
+        url: 'register.php', // get the route value
+        data: formData,
+        dataType: "json",
+        encode: true,
+        success : function (data) {
+          // console.log(data);
+        // var result = $.parseJSON(data);
+        // console.log(result);
+        for(i=0; i < data.length; i++){
+          if(data[i] != ""){
+            error_txt = data[i];
+          }
+        }
+        $('.register-alert').remove();
+        register_alert_box= "";
+        if(error_txt == ""){
+          register_alert_box += '<div class="alert alert-success alert-dismissible fade show fs-6 d-flex justify-content-between register-alert"' ;
+          register_alert_box += 'role="alert"' ;
+          register_alert_box += 'style="padding: 0.3rem 0.3rem;';
+          register_alert_box += 'margin-bottom: 0.3rem; line-height: 1;">';
+          register_alert_box += '<i class="fas fa-check-circle"></i>';
+          register_alert_box += '<span style="font-size: 0.8rem">' + "Success! Please proceed to login" + '</span>'
+          register_alert_box += '<i class="fas fa-times" ' ;
+          register_alert_box += 'data-bs-dismiss="alert"' ;
+          register_alert_box += 'aria-label="Close">';
+          register_alert_box += '</i></div>';
+          // console.log(error_txt);
+          $('.register-alert-description').after(register_alert_box);
+          setTimeout(document.getElementsByClassName("refresh-login")[0].click(), 3000);
+        }
+        else{
+          register_alert_box += '<div class="alert alert-danger alert-dismissible fade show fs-6 d-flex justify-content-between register-alert"' ;
+          register_alert_box += 'role="alert"' ;
+          register_alert_box += 'style="padding: 0.3rem 0.3rem;';
+          register_alert_box += 'margin-bottom: 0.3rem; line-height: 1;">';
+          register_alert_box += '<i class="fas fa-exclamation-triangle"></i>';
+          register_alert_box += '<span style="font-size: 0.8rem">' + error_txt + '</span>'
+          register_alert_box += '<i class="fas fa-times" ' ;
+          register_alert_box += 'data-bs-dismiss="alert"' ;
+          register_alert_box += 'aria-label="Close">';
+          register_alert_box += '</i></div>';
+          // console.log(error_txt);
+          $('.register-alert-description').after(register_alert_box);
+        }
+    }
+  });
+});
+  
+  /**================================================================================================
+  *!                                          LOGIN CODE 
+  *================================================================================================**/
+      $(document).on('click', ".submit-login", function(){
+        console.log("login clicked");
+      error_txt="";
+      var formData = {
+      username: $(".un-login").val(),
+      password: $(".ps-login").val(),
+    };
+    
+      $.ajax({
+        method: "POST", //we are using GET method to get all record from the server
+        url: 'login.php', // get the route value
+        data: formData,
+        dataType: "json",
+        encode: true,
+        success : function (data) {
+          // console.log(data);
+        // var result = $.parseJSON(data);
+        // console.log(result);
+        for(i=0; i < data.length; i++){
+          if(data[i] != ""){
+            error_txt = data[i];
+          }
+        }
+        $('.login-alert').remove();
+        login_alert_box= "";
+        if(error_txt == "" || error_txt == "kaytwenter"){
+          login_alert_box += '<div class="alert alert-success alert-dismissible fade show fs-6 d-flex justify-content-between login-alert"' ;
+          login_alert_box += 'role="alert"' ;
+          login_alert_box += 'style="padding: 0.3rem 0.3rem;';
+          login_alert_box += 'margin-bottom: 0.3rem; line-height: 1;">';
+          login_alert_box += '<i class="fas fa-check-circle"></i>';
+          login_alert_box += '<span style="font-size: 0.8rem">' + "Success! Please wait...." + '</span>';
+          login_alert_box += '<i class="fas fa-times" ' ;
+          login_alert_box += 'data-bs-dismiss="alert"' ;
+          login_alert_box += 'aria-label="Close">';
+          login_alert_box += '</i></div>';
+          $('.login-alert-description').after(login_alert_box);
+          setTimeout(document.getElementsByClassName("refresh-login")[0].click(), 3000);
+        } 
+        // else if(error_txt == "kaytwenter"){
+        //   console.log(error_txt);
+        //    if($(".logout-link").hasClass("d-none") == true){
+        //     $(".logout-link").toggleClass("d-none",false);
+        //     $(".login-register-link").toggleClass("d-none",true);
+        //    }
+        // }
+        else{
+          login_alert_box += '<div class="alert alert-danger alert-dismissible fade show fs-6 d-flex justify-content-between login-alert"' ;
+          login_alert_box += 'role="alert"' ;
+          login_alert_box += 'style="padding: 0.3rem 0.3rem;';
+          login_alert_box += 'margin-bottom: 0.3rem; line-height: 1;">';
+          login_alert_box += '<i class="fas fa-exclamation-triangle"></i>';
+          login_alert_box += '<span style="font-size: 0.8rem">' + error_txt + '</span>';
+          login_alert_box += '<i class="fas fa-times" ' ;
+          login_alert_box += 'data-bs-dismiss="alert"' ;
+          login_alert_box += 'aria-label="Close">';
+          login_alert_box += '</i></div>';
+          // console.log(error_txt);
+          $('.login-alert-description').after(login_alert_box);
+        }
+    }
+  });
+});
+
+$(document).on('click', ".logout-link", function(){
+  myf("logout.php");
+  myf("login.php");
+  myf("register.php");
+  
+  function myf(url){$.ajax({
+      method: "POST",
+      url: url,
+      success: function () {
+        console.log('logged out');
+      }
+    });
+  }
+  });
+
     /**================================================================================================
      *!                             ARTICLES & BLOGS POPULATOR CODE
      *================================================================================================**/
-    $.ajax({
-      method: "POST",
-      url: 'load-articles.php',
-      data: { key: ""},
+     $.ajax({
+      method: "GET",
+      url: 'arts.json',
       success: function (response) {
+        // console.log(response);
         function getDateInForm(date2) {
           const date = new Date(date2);
           const formattedDate = date.toLocaleString("en-GB", {
@@ -354,20 +975,29 @@
           });
           return(formattedDate);
         }
-      response = JSON.parse(response);
+        
+        function checkIfNull(val) {
+          if(val == null){
+            return("https://cdn.pixabay.com/photo/2020/04/04/13/41/corona-5002341_960_720.jpg");
+          }
+          else{
+            return(val)
+          }
+        }
+      //response = JSON.parse(response);
       html = "";
       ar = [];
       $.each(response, function(key, value) {
         for(i=0; i < value.length; i++){
-          console.log(value[i].source);
+          // console.log(value[i].source);
           html += '<div class="post-slide"> <div class="post-img"> <a href="' + value[i].url ;
-          html += '"><img src="'+ value[i].image ;
+          html += '"><img src="'+ checkIfNull(value[i].image) ;
           html += '" alt=""></a> </div> <div class="post-content"> <h3 class="post-title"><a href="' ;
           html += value[i].url + '">' + value[i].title +'</a></h3> <p class="post-description">';
-          html += value[i].description +'</p> <ul class="post-bar text-start"> <li><i class="fa fa-calendar"></i>';
-          html += getDateInForm(value[i].published_at) +'</li> <li> <i class="fas fa-globe"></i>';
-          html += '<a href="">'+ value[i].source +'</a><i class="fas fa-user-edit"></i></i>';
-          html += '<a href="">'+ value[i].author +'</a>' ;
+          html += value[i].description +'</p> <ul class="post-bar text-start"> <li><i class="fa fa-calendar text-primary"></i>';
+          html += getDateInForm(value[i].published_at) +'</li> <li class="detes"> <i class="fas fa-globe text-primary"></i>';
+          html += '<a href="'+ value[i].url +'">'+ value[i].source +'</a>&nbsp&nbsp&nbsp&nbsp&nbsp<i class="fas fa-user-edit text-primary"></i></i>';
+          html += '<a href="'+ value[i].url +'">'+ value[i].author +'</a>' ;
           //html += '<a href="">vivek</a>' ;
           html += '</li></ul> <a href="';
           html += value[i].url + '" class="read-more">read more</a></div></div>';
@@ -381,12 +1011,11 @@
       textclamp();
       }
     });
-  </script>
-  <script type="text/javascript">
-    /**================================================================================================
-     *!                            SHOP BY OFFER GRID POPULATOR CODE 
-     *================================================================================================**/
-    $(document).ready(function () {
+
+
+/**================================================================================================
+*!                            SHOP BY CATEGORY GRID POPULATOR CODE 
+*================================================================================================**/
       // Ajax config
       $.ajax({
         method: "POST", //we are using GET method to get all record from the server
@@ -405,7 +1034,7 @@
           html = "";
           $.each(response, function (key, value) {
             function stockcheck(s) { if (s == 1) { return ("in stock"); } else { return ("out of stock"); } }
-            console.log(value.price);
+            // console.log(value.price);
             html += '<div class="col-md-2 col-6 col-sm-6"> <div class="product-grid"> <div class="product-image"> <a href="#" class="image">';
             html += '<img class="pic-1" src="' + value.image + '">';
             html += '</a> <a class="add-to-cart" href="">ADD TO CART</a>'
@@ -442,7 +1071,7 @@
           }
           $count = 0;
           for (j = 0; j < ar.length; j++) {
-            console.log(j);
+            // console.log(j);
             $("#crsl-row-" + $count).append(ar[j]);
             p = j + 1;
             if (p % $sizer == 0) {
@@ -471,7 +1100,7 @@
           html = "";
           $.each(response, function (key, value) {
             function stockcheck(s) { if (s == 1) { return ("in stock"); } else { return ("out of stock"); } }
-            console.log(value.price);
+            // console.log(value.price);
             html += '<div class="col-md-2 col-6 col-sm-6"> <div class="product-grid"> <div class="product-image"> <a href="#" class="image">';
             html += '<img class="pic-1" src="' + value.image + '">';
             html += '</a> <a class="add-to-cart" href="">ADD TO CART</a>'
@@ -508,7 +1137,7 @@
           }
           $count = 0;
           for (j = 0; j < ar.length; j++) {
-            console.log(j);
+            // console.log(j);
             $("#crsl2-row-" + $count).append(ar[j]);
             p = j + 1;
             if (p % $sizer == 0) {
@@ -528,7 +1157,7 @@
             method: "POST",
             data: { meds: meds },
             success: function (data) {
-              console.log(data);
+              // console.log(data);
               $("#medsList").fadeIn("fast").html(data);
             }
           });
@@ -544,13 +1173,13 @@
           return num;
         }
         $("#medsList").css("width", calcValOfMedboxWidth());
-        console.log(calcValOfMedboxWidth());
+        // console.log(calcValOfMedboxWidth());
       });
       /**================================================================================================
-       *!                                 Initializing owl carousel
+       *!                        Initializing owl carousel for articles & blogs
        *================================================================================================**/
        $("#news-slider").owlCarousel({
-        items: 4,
+        items: 3,
         nav: false,
         lazyload: true,
         responsive: {
@@ -559,6 +1188,24 @@
           },
           800: {
             items: 3
+          }
+        }
+      });
+
+      
+      /**================================================================================================
+       *!                        Initializing owl carousel for Health condition
+       *================================================================================================**/
+      $("#health-condition-div").owlCarousel({
+        items: 3,
+        nav: false,
+        lazyload: true,
+        responsive: {
+          0: {
+            items: 3
+          },
+          800: {
+            items: 4
           }
         }
       });
@@ -585,6 +1232,15 @@
       $("#medsList").fadeOut();
     });
 
+    /**================================================================================================
+     *!                           Checks the checkbox when label is clicked 
+     *================================================================================================**/
+    $(document).on('click', ".checkBox_Login", function(){
+      $('.checkBox_Item1').trigger('click');
+    });
+    $(document).on('click', ".checkBox_Register", function(){
+      $('.checkBox_Item2').trigger('click');
+    });
     /**================================================================================================
      *!                     Hides the suggestions div when textbox focus is lost
      *================================================================================================**/
@@ -627,6 +1283,6 @@
         
     });
   </script>
-</body>
+  </body>
 
 </html>

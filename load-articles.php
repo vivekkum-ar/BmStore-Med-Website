@@ -10,7 +10,7 @@
 
 
 $queryString = http_build_query([
-    'access_key' => 'a6329d9130aab4f8a5caa6cd750ba8ab',
+    'access_key' => 'a6dc0832d6c43aff3382820f88f747da',
     // 'keywords' => 'Wall street -wolf',
     'categories' => 'health',
     'sort' => 'popularity',
